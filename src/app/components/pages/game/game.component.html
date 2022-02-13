@@ -1,0 +1,156 @@
+<div class="banner_main">
+    <div class="container">
+
+        <div class="row tablero">
+            <h1><b> Tablero de Juego</b></h1>
+        </div>
+
+        
+        
+        
+          
+         
+          
+          <div class="row colors">
+              <div class="col-xs-12 col-md-8">
+                <mat-card class="example-card">
+                    <mat-card-header>
+                      <div mat-card-avatar class="example-header-image"></div>
+    
+                    </mat-card-header>
+                    
+                    <mat-card-content>
+                        <div class="choices">
+                            <div class="choice" (click)="apuesta('1')">
+                              <img src="../assets/numeros/1.png">
+                            </div>
+                            <div class="choice" (click)="apuesta('2')">
+                              <img src="../assets/numeros/2.png">
+                            </div>
+                            <div class="choice" (click)="apuesta('3')">
+                              <img src="../assets/numeros/3.png">
+                            </div>
+                            <div class="choice" (click)="apuesta('4')">
+                              <img src="../assets/numeros/4.png">
+                             
+                            </div>
+                            <div class="choice" (click)="apuesta('5')">
+                              <img src="../assets/numeros/5.png">
+                              
+                            </div>
+                            <div class="choice" (click)="apuesta('6')">
+                              <img src="../assets/numeros/6.png">
+                              
+                            </div>
+                            <div class="choice" (click)="apuesta('7')">
+                              <img src="../assets/numeros/7.png">
+                              
+                            </div>
+                            <div class="choice" (click)="apuesta('8')">
+                              <img src="../assets/numeros/8.png">
+                            </div>
+                            <div class="choice" (click)="apuesta('9')">
+                              <img src="../assets/numeros/9.png">
+                            </div>
+                          </div>
+    
+                    </mat-card-content>
+    
+                  </mat-card>
+
+              </div>
+
+              <div class=".col-md-4 .col-md-offset-4 card-apuesta">
+                <mat-card class="example-card2">
+           
+                   
+                    <mat-card-content>
+                        <p class="info-game">{{result}}</p>
+                      <table>
+                          <tr >
+                            <td *ngFor="let balota of arraydeapuesta">
+                              
+                                <div class="choice2"> <img  src="../assets/numeros/{{balota}}.png" alt=""> </div>
+                             
+                            </td>
+                          </tr>
+                        </table>
+                        <div class="row">
+                            <button  class="btn btn-primary" (click)="apostar('bet')">Apostar</button>
+                            
+                            
+                                <label > &euro;x5</label>
+                                <input id="bet" type="number" placeholder="Euros">
+                            
+
+                        </div>
+                        
+
+                      
+                    </mat-card-content>
+  
+                </mat-card>
+  
+
+
+              </div>
+
+            
+
+              
+
+
+          </div>
+
+           <div class="row">
+
+            <div class="col-xs-12 col-md-8 result">
+                <mat-card class="example-card2">
+           
+                   
+                    <mat-card-content>
+                        <p class="info-game">Balota ganadora</p>
+                        <div class="choice"> <img  src="../assets/numeros/{{WinBalota}}.png" alt=""> </div>
+                    </mat-card-content>
+  
+                </mat-card>
+  
+
+
+              </div>
+
+
+
+              <div class=".col-md-4 .col-md-offset-4 card-apuesta">
+                <mat-card class="example-card2">
+           
+                   
+                    <mat-card-content>
+                        <p class="info-game">Puedes reclamar:</p>
+
+                        <p class="info-game">{{ganancia}}&euro;</p>        
+                                    
+                    </mat-card-content>
+  
+                </mat-card>
+  
+
+
+              </div>
+
+
+
+
+              <!--Aqui-->
+
+           </div> 
+          
+         
+         
+    
+    
+    </div>
+
+</div>
+
+

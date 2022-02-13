@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-export class GameGRService {
+export class GameGRServices {
 
   datos: string[]=[]
   
@@ -30,6 +30,7 @@ export class GameGRService {
     userAdd: number;
     compAdd: number;
     balota: string;
+    
     }{
       const playUserComp= this.getComputerChoice();
     console.log(`win: ${playUserComp}`);
@@ -41,6 +42,7 @@ export class GameGRService {
       userAdd: number;
       compAdd: number;
       balota: string;
+     
     };
     for(var i=0; i<datos.length;i++){
      
@@ -52,7 +54,8 @@ export class GameGRService {
           message: 'Ganaste',
           userAdd: 1,
           compAdd: 0,
-          balota: playUserComp
+          balota: playUserComp,
+        
         };
         break;
 
@@ -62,56 +65,19 @@ export class GameGRService {
           message: 'perdiste',
           userAdd: 0,
           compAdd: 1,
-          balota: playUserComp
+          balota: playUserComp,
+         
         };
       }
 
     }
-    console.log(datos)
+    
     return playStatus;
 
 
   }
 }
 
- /* game(
-    userChoice: string
-  ): {
-    message: string;
-    userAdd: number;
-    compAdd: number;
-    balota: string;
-  }{
-    const playUserComp = userChoice + this.getComputerChoice();
-    console.log(`Jugada realizada: ${playUserComp}`);
-
-    let playStatus!: {
-      message: string;
-      userAdd: number;
-      compAdd: number;
-      balota: string;
-    };
-    
-
-    if(playUserComp[0]==playUserComp[1]){
-      playStatus = {
-        message: 'Ganaste',
-        userAdd: 1,
-        compAdd: 0,
-        balota: playUserComp[1]
-      };
-      console.log("User: ",userChoice);
-      console.log("Result: ", this.getComputerChoice());
-
-    }else{
-      playStatus = {
-        message: 'perdiste',
-        userAdd: 0,
-        compAdd: 1,
-        balota: playUserComp[1]
-      };
-    }
-    return playStatus;
-  }*/
+ 
 
 
