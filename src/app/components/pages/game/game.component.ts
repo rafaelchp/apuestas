@@ -49,15 +49,15 @@ export class GameComponent implements OnInit {
 
     let bet = <HTMLInputElement>document.getElementById(id);
     
-    if(bet.value!=='NaN' && this.result=="Ganaste"){
+    if( this.result=="Ganaste"){
       
       this.ganancia= Math.round((parseInt(bet.value)*5/(this.arraydeapuesta.length))*1.5)
       
 
 
       
-    }{
-      this.ganancia=Math.round( (5/this.arraydeapuesta.length)*1.5);
+    }else{
+      this.ganancia=0;
     }
     
 
